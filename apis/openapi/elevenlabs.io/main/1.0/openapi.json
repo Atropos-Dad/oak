@@ -11,6 +11,11 @@
       "url": "https://api.elevenlabs.io"
     }
   ],
+  "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
   "paths": {
     "/v1/history": {
       "get": {
@@ -114,24 +119,6 @@
               "title": "Source"
             },
             "description": "Source of the generated history item"
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -182,24 +169,6 @@
               "title": "History Item Id"
             },
             "description": "History item ID to be used, you can use GET https://api.elevenlabs.io/v1/history to receive a list of history items and their IDs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -248,24 +217,6 @@
               "title": "History Item Id"
             },
             "description": "History item ID to be used, you can use GET https://api.elevenlabs.io/v1/history to receive a list of history items and their IDs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -316,24 +267,6 @@
               "title": "History Item Id"
             },
             "description": "History item ID to be used, you can use GET https://api.elevenlabs.io/v1/history to receive a list of history items and their IDs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -479,24 +412,6 @@
               "default": "mp3_44100_128"
             },
             "description": "Output format of the generated audio. Formatted as codec_sample_rate_bitrate. So an mp3 with 22.05kHz sample rate at 32kbs is represented as mp3_22050_32. MP3 with 192kbps bitrate requires you to be subscribed to Creator tier or above. PCM with 44.1kHz sample rate requires you to be subscribed to Pro tier or above. Note that the \u03bc-law format (sometimes written mu-law, often approximated as u-law) is commonly used for Twilio audio inputs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -701,24 +616,6 @@
               "title": "Sample Id"
             },
             "description": "Sample ID to be used, you can use GET https://api.elevenlabs.io/v1/voices/{voice_id} to list all the available samples for a voice."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -783,24 +680,6 @@
               "title": "Sample Id"
             },
             "description": "Sample ID to be used, you can use GET https://api.elevenlabs.io/v1/voices/{voice_id} to list all the available samples for a voice."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -910,24 +789,6 @@
               "default": "mp3_44100_128"
             },
             "description": "Output format of the generated audio. Formatted as codec_sample_rate_bitrate. So an mp3 with 22.05kHz sample rate at 32kbs is represented as mp3_22050_32. MP3 with 192kbps bitrate requires you to be subscribed to Creator tier or above. PCM with 44.1kHz sample rate requires you to be subscribed to Pro tier or above. Note that the \u03bc-law format (sometimes written mu-law, often approximated as u-law) is commonly used for Twilio audio inputs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -1052,24 +913,6 @@
               "default": "mp3_44100_128"
             },
             "description": "Output format of the generated audio. Formatted as codec_sample_rate_bitrate. So an mp3 with 22.05kHz sample rate at 32kbs is represented as mp3_22050_32. MP3 with 192kbps bitrate requires you to be subscribed to Creator tier or above. PCM with 44.1kHz sample rate requires you to be subscribed to Pro tier or above. Note that the \u03bc-law format (sometimes written mu-law, often approximated as u-law) is commonly used for Twilio audio inputs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -1193,24 +1036,6 @@
               "default": "mp3_44100_128"
             },
             "description": "Output format of the generated audio. Formatted as codec_sample_rate_bitrate. So an mp3 with 22.05kHz sample rate at 32kbs is represented as mp3_22050_32. MP3 with 192kbps bitrate requires you to be subscribed to Creator tier or above. PCM with 44.1kHz sample rate requires you to be subscribed to Pro tier or above. Note that the \u03bc-law format (sometimes written mu-law, often approximated as u-law) is commonly used for Twilio audio inputs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -1336,24 +1161,6 @@
               "default": "mp3_44100_128"
             },
             "description": "Output format of the generated audio. Formatted as codec_sample_rate_bitrate. So an mp3 with 22.05kHz sample rate at 32kbs is represented as mp3_22050_32. MP3 with 192kbps bitrate requires you to be subscribed to Creator tier or above. PCM with 44.1kHz sample rate requires you to be subscribed to Pro tier or above. Note that the \u03bc-law format (sometimes written mu-law, often approximated as u-law) is commonly used for Twilio audio inputs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -1478,24 +1285,6 @@
               "default": "mp3_44100_128"
             },
             "description": "Output format of the generated audio. Formatted as codec_sample_rate_bitrate. So an mp3 with 22.05kHz sample rate at 32kbs is represented as mp3_22050_32. MP3 with 192kbps bitrate requires you to be subscribed to Creator tier or above. PCM with 44.1kHz sample rate requires you to be subscribed to Pro tier or above. Note that the \u03bc-law format (sometimes written mu-law, often approximated as u-law) is commonly used for Twilio audio inputs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -1620,24 +1409,6 @@
               "default": "mp3_44100_128"
             },
             "description": "Output format of the generated audio. Formatted as codec_sample_rate_bitrate. So an mp3 with 22.05kHz sample rate at 32kbs is represented as mp3_22050_32. MP3 with 192kbps bitrate requires you to be subscribed to Creator tier or above. PCM with 44.1kHz sample rate requires you to be subscribed to Pro tier or above. Note that the \u03bc-law format (sometimes written mu-law, often approximated as u-law) is commonly used for Twilio audio inputs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -1801,24 +1572,6 @@
               "default": "mp3_44100_192"
             },
             "description": "Output format of the generated audio. Formatted as codec_sample_rate_bitrate. So an mp3 with 22.05kHz sample rate at 32kbs is represented as mp3_22050_32. MP3 with 192kbps bitrate requires you to be subscribed to Creator tier or above. PCM with 44.1kHz sample rate requires you to be subscribed to Pro tier or above. Note that the \u03bc-law format (sometimes written mu-law, often approximated as u-law) is commonly used for Twilio audio inputs."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -2123,24 +1876,6 @@
               "title": "Show Legacy"
             },
             "description": "If set to true, legacy premade voices will be included in responses from /v1/voices"
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -2339,24 +2074,6 @@
               "title": "Include Total Count"
             },
             "description": "Whether to include the total count of voices found in the response. Incurs a performance cost."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -2431,24 +2148,6 @@
               "title": "Voice Id"
             },
             "description": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -2513,24 +2212,6 @@
             },
             "description": "This parameter is now deprecated. It is ignored and will be removed in a future version.",
             "deprecated": true
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -2579,24 +2260,6 @@
               "title": "Voice Id"
             },
             "description": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -2647,24 +2310,6 @@
               "title": "Voice Id"
             },
             "description": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -2790,24 +2435,6 @@
               "title": "Voice Id"
             },
             "description": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -2882,24 +2509,6 @@
               "title": "Voice Id"
             },
             "description": "Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -3311,24 +2920,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -3390,24 +2981,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -3459,24 +3032,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -3531,24 +3086,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -3606,24 +3143,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -3671,24 +3190,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -3735,24 +3236,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -3816,24 +3299,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -3891,24 +3356,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -3963,24 +3410,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -4027,24 +3456,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -4099,24 +3510,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -4179,24 +3572,6 @@
               "title": "Project Snapshot Id"
             },
             "description": "The ID of the Studio project snapshot."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -4264,24 +3639,6 @@
               "title": "Project Snapshot Id"
             },
             "description": "The ID of the Studio project snapshot."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -4353,24 +3710,6 @@
               "title": "Project Snapshot Id"
             },
             "description": "The ID of the Studio project snapshot."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -4435,24 +3774,6 @@
               "title": "Project Snapshot Id"
             },
             "description": "The ID of the Studio project snapshot."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -4522,24 +3843,6 @@
               "title": "Project Snapshot Id"
             },
             "description": "The ID of the Studio project snapshot."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -4581,24 +3884,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -4650,24 +3935,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -4732,24 +3999,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -4812,24 +4061,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -4895,24 +4126,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -4987,24 +4200,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -5073,24 +4268,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -5152,24 +4329,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -5240,24 +4399,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -5305,24 +4446,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -5395,24 +4518,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -5481,24 +4586,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -5559,24 +4646,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -5645,24 +4714,6 @@
               "title": "Chapter Id"
             },
             "description": "The ID of the chapter."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -5739,24 +4790,6 @@
               "title": "Chapter Snapshot Id"
             },
             "description": "The ID of the chapter snapshot."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -5838,24 +4871,6 @@
               "title": "Chapter Snapshot Id"
             },
             "description": "The ID of the chapter snapshot."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -5949,24 +4964,6 @@
               "title": "Chapter Snapshot Id"
             },
             "description": "The ID of the chapter snapshot."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -6017,24 +5014,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -6099,24 +5078,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -6172,24 +5133,6 @@
               "title": "Dubbing Id"
             },
             "description": "ID of the dubbing project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -6239,24 +5182,6 @@
               "title": "Dubbing Id"
             },
             "description": "ID of the dubbing project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -6327,24 +5252,6 @@
               "title": "Speaker Id"
             },
             "description": "ID of the speaker."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -6427,24 +5334,6 @@
               "title": "Language"
             },
             "description": "ID of the language."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -6516,24 +5405,6 @@
               "title": "Segment Id"
             },
             "description": "ID of the segment"
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -6583,24 +5454,6 @@
               "title": "Dubbing Id"
             },
             "description": "ID of the dubbing project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -6660,24 +5513,6 @@
               "title": "Dubbing Id"
             },
             "description": "ID of the dubbing project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -6737,24 +5572,6 @@
               "title": "Dubbing Id"
             },
             "description": "ID of the dubbing project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -6875,24 +5692,6 @@
               "title": "Dubbing Id"
             },
             "description": "ID of the dubbing project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -6938,24 +5737,6 @@
               "title": "Dubbing Id"
             },
             "description": "ID of the dubbing project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -7014,24 +5795,6 @@
               "title": "Language Code"
             },
             "description": "ID of the language."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -7147,24 +5910,6 @@
               "title": "Format Type"
             },
             "description": "Format to use for the subtitle file, either 'srt' or 'webvtt'"
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -7376,24 +6121,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -7444,24 +6171,6 @@
               "title": "Project Id"
             },
             "description": "The ID of the Studio project."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -7822,24 +6531,6 @@
               "default": 0,
               "title": "Page"
             }
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -7990,24 +6681,6 @@
               "default": "none"
             },
             "description": "How to break down the information. Cannot be \"user\" if include_workspace_metrics is False."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -8186,24 +6859,6 @@
               "title": "Pronunciation Dictionary Id"
             },
             "description": "The id of the pronunciation dictionary"
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -8264,24 +6919,6 @@
               "title": "Pronunciation Dictionary Id"
             },
             "description": "The id of the pronunciation dictionary"
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -8356,24 +6993,6 @@
               "title": "Version Id"
             },
             "description": "The id of the version of the pronunciation dictionary"
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -8433,24 +7052,6 @@
               "title": "Pronunciation Dictionary Id"
             },
             "description": "The id of the pronunciation dictionary"
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -8567,24 +7168,6 @@
               "title": "Sort Direction"
             },
             "description": "Which direction to sort the voices in. 'ascending' or 'descending'."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -9082,24 +7665,6 @@
               "description": "Resource type of the target resource."
             },
             "description": "Resource type of the target resource."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -9145,24 +7710,6 @@
               "title": "Resource Id"
             },
             "description": "The ID of the target resource."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -9216,24 +7763,6 @@
               "title": "Resource Id"
             },
             "description": "The ID of the target resource."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -9338,24 +7867,6 @@
               "default": true
             },
             "description": "When enable_logging is set to false zero retention mode will be used for the request. This will mean history features are unavailable for this request, including request stitching. Zero retention mode may only be used by enterprise customers."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -9416,24 +7927,6 @@
               "title": "Agent Id"
             },
             "description": "The id of the agent you're taking the action on."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -9546,24 +8039,6 @@
               "title": "Use Tool Ids"
             },
             "description": "Use tool ids instead of tools specs from request payload."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -9625,24 +8100,6 @@
               "title": "Agent Id"
             },
             "description": "The id of an agent. This is returned on agent creation."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -9704,24 +8161,6 @@
               "title": "Use Tool Ids"
             },
             "description": "Use tool ids instead of tools specs from request payload."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -9780,24 +8219,6 @@
               "title": "Agent Id"
             },
             "description": "The id of an agent. This is returned on agent creation."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -9863,24 +8284,6 @@
               "title": "Conversation Signature"
             },
             "description": "An expiring token that enables a conversation to start. These can be generated for an agent using the /v1/convai/conversation/get_signed_url endpoint"
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -9932,24 +8335,6 @@
               "title": "Agent Id"
             },
             "description": "The id of an agent. This is returned on agent creation."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -10001,24 +8386,6 @@
               "title": "Agent Id"
             },
             "description": "The id of an agent. This is returned on agent creation."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -10115,24 +8482,6 @@
               "title": "Search"
             },
             "description": "Search by agents name."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -10243,24 +8592,6 @@
               "title": "Page Size"
             },
             "description": "How many conversations to return at maximum. Can not exceed 100, defaults to 30."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -10312,24 +8643,6 @@
               "title": "Conversation Id"
             },
             "description": "The id of the conversation you're taking the action on."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -10379,24 +8692,6 @@
               "title": "Conversation Id"
             },
             "description": "The id of the conversation you're taking the action on."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -10446,24 +8741,6 @@
               "title": "Conversation Id"
             },
             "description": "The id of the conversation you're taking the action on."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -10644,24 +8921,6 @@
               "title": "Phone Number Id"
             },
             "description": "The id of an agent. This is returned on agent creation."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -10711,24 +8970,6 @@
               "title": "Phone Number Id"
             },
             "description": "The id of an agent. This is returned on agent creation."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -10776,24 +9017,6 @@
               "title": "Phone Number Id"
             },
             "description": "The id of an agent. This is returned on agent creation."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -11034,24 +9257,6 @@
               "title": "Use Typesense"
             },
             "description": "If set to true, the endpoint will use typesense DB to search for the documents)."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -11229,24 +9434,6 @@
               "title": "Documentation Id"
             },
             "description": "The id of a document from the knowledge base. This is returned on document addition."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "requestBody": {
@@ -11309,24 +9496,6 @@
               "title": "Documentation Id"
             },
             "description": "The id of a document from the knowledge base. This is returned on document addition."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -11391,24 +9560,6 @@
               "title": "Documentation Id"
             },
             "description": "The id of a document from the knowledge base. This is returned on document addition."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -11459,24 +9610,6 @@
               "title": "Documentation Id"
             },
             "description": "The id of a document from the knowledge base. This is returned on document addition."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -11574,24 +9707,6 @@
               "title": "Page Size"
             },
             "description": "How many documents to return at maximum. Can not exceed 100, defaults to 30."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -11643,24 +9758,6 @@
               "title": "Documentation Id"
             },
             "description": "The id of a document from the knowledge base. This is returned on document addition."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -11724,24 +9821,6 @@
               "title": "Chunk Id"
             },
             "description": "The id of a document RAG chunk from the knowledge base."
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -12018,24 +10097,6 @@
               "type": "string",
               "title": "Secret Id"
             }
-          },
-          {
-            "name": "xi-api-key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website.",
-              "title": "Xi-Api-Key"
-            },
-            "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
           }
         ],
         "responses": {
@@ -12075,6 +10136,14 @@
     }
   },
   "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "name": "xi-api-key",
+        "in": "header",
+        "description": "Your API key. This is required by most endpoints to access our API programatically. You can view your xi-api-key using the 'Profile' tab on the website."
+      }
+    },
     "schemas": {
       "ASRConversationalConfig": {
         "properties": {
